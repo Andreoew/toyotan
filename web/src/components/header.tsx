@@ -29,7 +29,7 @@ export function Header({ onContactClick }: HeaderProps) {
             <BadgeInfo  />
             <span className='md:text-2xl'>Sobre</span> 
           </Navlink>
-          <Navlink to="/" onClick={onContactClick}>
+          <Navlink to="/contact" onClick={onContactClick}>
             <LucidePhoneCall  />
             <span className='md:text-2xl'>Contato</span>            
           </Navlink>

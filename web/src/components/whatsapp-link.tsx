@@ -8,7 +8,7 @@ interface IWhatsAppProps {
   width?: string;
 }
 
-export const WhatsAppLink = ({ title = "Clique para falar conosco.", phone, height, width }: IWhatsAppProps) => {
+export const WhatsAppLink = ({ title = "Clique para falar conosco.", phone, height = "24px", width = "24px" }: IWhatsAppProps) => {
   const [whatsappLink, setWhatsappLink] = useState("");
 
   useEffect(() => {
@@ -20,12 +20,11 @@ export const WhatsAppLink = ({ title = "Clique para falar conosco.", phone, heig
   }, [phone]);
 
   return (
-    <a target="_blank" href={whatsappLink} className="relative flex h-10 w-10">
-      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+    <a target="_blank" href={whatsappLink} className="flex items-center justify-center">
       <img
         title={title}
         src={icoWhatsapp}
-        className="relative inline-flex rounded-full bg-green-500"
+        className="rounded-full bg-green-500"
         style={{ height, width }}
       />
     </a>

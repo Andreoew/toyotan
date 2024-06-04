@@ -4,6 +4,7 @@ import { PublicLayout  } from "./pages/_layouts/public"
 import { Home } from "./pages/public/home"
 import { About } from "./pages/public/about"
 import { Services } from "./pages/public/services"
+import { Contact } from "./pages/public/contact"
 
 
 export const router = createBrowserRouter([
@@ -22,7 +23,11 @@ export const router = createBrowserRouter([
       {
         path: '/services',
         element: <Services />,
-      }   
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
+      }     
     ],
   },  
 ])
