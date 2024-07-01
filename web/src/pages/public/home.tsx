@@ -45,7 +45,7 @@ export function Home() {
               <Accordion
                 type="single"
                 collapsible
-                className="flex flex-col justify-center gap-3 text-center"
+                className="flex flex-col justify-center gap-3 text-center w-[350px]"
               >
                 <AccordionItem
                   value="item-1"
@@ -140,12 +140,17 @@ export function Home() {
                 </AccordionItem>
               </Accordion>
 
-              <div className="relative flex flex-col items-center justify-center text-center">
+              <div className="relative flex flex-col items-center justify-center text-center py-20">
                 <img
                   src={imgPneu}
                   alt="Image de peças"
                   // className="h-[250px] w-[250px] animate-spin-slow md:h-[350px] md:w-[350px]"
-                  className="h-[390px] w-[390px] animate-spin-slow md:h-[330px] md:w-[330px]"
+                  className="h-[275px] w-[275px] animate-spin-slow md:h-[330px] md:w-[330px]"
+                  style={{
+                    maxHeight: '95%',
+                    maxWidth: '95%',
+                    objectFit: 'contain'
+                  }}
                 />
                 <img
                   src={imgVeic}
@@ -153,7 +158,7 @@ export function Home() {
                   // className="absolute top-1/2 left-1/2 h-[300px] w-auto max-w-full -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:h-[275px] md:w-auto"
 
                   // className="absolute h-[200px] w-auto max-w-full -rotate-90 transform md:h-[275px] md:w-auto"
-                  className="absolute h-[350px] w-auto max-w-full -rotate-90 transform md:h-[275px] md:w-auto"
+                  className="absolute h-[200px] w-auto max-w-full -rotate-90 transform md:h-[275px] md:w-auto"
                   style={{
                     top: '50%',
                     left: '50%',
@@ -161,11 +166,11 @@ export function Home() {
                   }}
                 />
               </div>
-              <div className="flex flex-col justify-center gap-3 text-start">
+              <div className="flex flex-col justify-center gap-3 text-start items-end">
                 <Accordion
                   type="single"
                   collapsible
-                  className="flex flex-col justify-center gap-3 text-center"
+                  className="flex flex-col justify-center gap-3 text-center w-[350px]"
                 >
                   <AccordionItem
                     value="item-1"
