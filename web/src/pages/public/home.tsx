@@ -15,29 +15,7 @@ export function Home() {
   return (
     <>
       <div className="md:flex md:flex-col">
-        <Slider />
-
-        {/* <div className="flex justify-center">
-          <div className="grid h-full w-full max-w-[124rem] grid-cols-1 gap-4 bg-muted shadow shadow-secondary-foreground md:grid-cols-4">
-            <div className="flex flex-col items-center justify-center py-3 font-bold">
-              <CreditCard />
-              Parcele em até 3X
-            </div>
-            <div className="flex flex-col items-center justify-center py-3 font-bold">
-              <CarFront />
-              Garantia em peças e serviços
-            </div>
-            <div className="flex flex-col items-center justify-center py-3 font-bold">
-              <Wrench />
-              Mão de obra especializada
-            </div>
-            <div className="flex flex-col items-center justify-center py-3 font-bold text-justify">
-              <span className="rounded bg-muted-foreground px-3">🇯🇵 🇧🇷</span>
-              Somos treinados pelas maiores montadoras no Brasil e Japão, em uma
-              das maiores marca do Mundo.
-            </div>
-          </div>
-        </div> */}
+        <Slider />        
         <div className="flex justify-center">
           <div className="grid h-full w-full max-w-[124rem] grid-cols-1 gap-4 bg-muted shadow shadow-secondary-foreground/30 md:grid-cols-3">
             <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold">
@@ -166,12 +144,21 @@ export function Home() {
                 <img
                   src={imgPneu}
                   alt="Image de peças"
-                  className="h-[200px] w-[200px] animate-spin-slow md:h-[350px] md:w-[350px]"
+                  // className="h-[250px] w-[250px] animate-spin-slow md:h-[350px] md:w-[350px]"
+                  className="h-[390px] w-[390px] animate-spin-slow md:h-[330px] md:w-[330px]"
                 />
                 <img
                   src={imgVeic}
                   alt="Imagem de veículo"
-                  className="absolute h-[200px] w-auto max-w-full -rotate-90 transform md:h-[275px] md:w-auto"
+                  // className="absolute top-1/2 left-1/2 h-[300px] w-auto max-w-full -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:h-[275px] md:w-auto"
+
+                  // className="absolute h-[200px] w-auto max-w-full -rotate-90 transform md:h-[275px] md:w-auto"
+                  className="absolute h-[350px] w-auto max-w-full -rotate-90 transform md:h-[275px] md:w-auto"
+                  style={{
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%) rotate(-90deg)',
+                  }}
                 />
               </div>
               <div className="flex flex-col justify-center gap-3 text-start">
