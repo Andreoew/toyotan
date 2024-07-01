@@ -17,18 +17,18 @@ export function Home() {
       <div className="md:flex md:flex-col">
         <Slider />        
         <div className="flex justify-center">
-          <div className="grid h-full w-full max-w-[124rem] grid-cols-1 gap-4 bg-muted shadow shadow-secondary-foreground/30 md:grid-cols-3">
-            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-secondary-foreground/30">
+          <div className="grid h-full w-full max-w-[124rem] grid-cols-1 gap-4 md:bg-secondary  shadow shadow-secondary-foreground/30 md:grid-cols-3">
+            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-muted md:bg-muted">
               <CreditCard />
               <span className="mt-2 text-center">Parcele em até 3X</span>
             </div>
-            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-secondary-foreground/30">
+            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-muted md:bg-muted">
               <CarFront />
               <span className="mt-2 text-center">
                 Garantia em peças e serviços
               </span>
             </div>
-            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-secondary-foreground/30">
+            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-muted md:bg-muted">
               <Wrench />
               <span className="mt-2 text-center">
                 Mão de obra especializada
