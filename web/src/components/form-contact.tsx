@@ -101,7 +101,7 @@ export function ContactForm() {
                 <FormLabel className="text-2xl">E-mail</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="seuemail.com.br"
+                    placeholder="seuemail@com.br"
                     {...field}
                     className="h-16 text-2xl"
                   />
