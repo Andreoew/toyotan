@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: 'https://toyotan-email.vercel.app/'
+  baseURL: import.meta.env.VITE_API_EMAIL
 })
