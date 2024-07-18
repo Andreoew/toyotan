@@ -72,6 +72,9 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         'spin-slow': 'spin 15s linear infinite',
       },
+      backgroundImage: {
+        pattern: 'url(/whatsapp-64.png)'
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
