@@ -36,7 +36,7 @@ export function Slider() {
     const baseLink = isMobile
       ? "https://api.whatsapp.com/send"
       : "https://web.whatsapp.com/send";
-    const phone = "5565999182810";
+    const phone = "5565996643812";
     const text =
       "Ol%C3%A1%20peguei%20seu%20contato%20no%20site,%20pode%20me%20atender?";
 

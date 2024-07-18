@@ -17,7 +17,7 @@ export function Footer() {
           Adss
         </a>
         <WhatsAppLink
-          phone="5565996643812"
+          phone="556599182810"
           title="Clique para falar com o desenvolvedor."
           height="24px"
           width="24px"

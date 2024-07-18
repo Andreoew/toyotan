@@ -1,7 +1,6 @@
 import { Slider } from "@/components/slider";
 import { CarFront, CreditCard, Wrench } from "lucide-react";
 import imgPneu from "@/assets/pneu-sem-bg.png";
-import icoWhatsapp from "@/assets/whatsapp.svg";
 import imgVeic from "@/assets/toyota-s-bg.png";
 import { MyGoogleMap } from "@/components/google-map";
 import {
@@ -10,25 +9,26 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { WhatsAppLink } from "@/components/whatsapp-link";
 
 export function Home() {
   return (
     <>
       <div className="md:flex md:flex-col">
-        <Slider />        
+        <Slider />
         <div className="flex justify-center">
-          <div className="grid h-full w-full max-w-[124rem] grid-cols-1 gap-4 md:bg-secondary  shadow shadow-secondary-foreground/30 md:grid-cols-3">
-            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-muted md:bg-muted">
+          <div className="grid h-full w-full max-w-[124rem] grid-cols-1 gap-4 shadow  shadow-secondary-foreground/30 md:grid-cols-3 md:bg-secondary">
+            <div className="flex min-h-[200px] flex-col items-center justify-center bg-muted px-4 py-3 font-bold md:bg-muted">
               <CreditCard />
               <span className="mt-2 text-center">Parcele em até 3X</span>
             </div>
-            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-muted md:bg-muted">
+            <div className="flex min-h-[200px] flex-col items-center justify-center bg-muted px-4 py-3 font-bold md:bg-muted">
               <CarFront />
               <span className="mt-2 text-center">
                 Garantia em peças e serviços
               </span>
             </div>
-            <div className="flex min-h-[200px] flex-col items-center justify-center px-4 py-3 font-bold bg-muted md:bg-muted">
+            <div className="flex min-h-[200px] flex-col items-center justify-center bg-muted px-4 py-3 font-bold md:bg-muted">
               <Wrench />
               <span className="mt-2 text-center">
                 Mão de obra especializada
@@ -45,7 +45,7 @@ export function Home() {
               <Accordion
                 type="single"
                 collapsible
-                className="flex flex-col justify-center gap-3 text-center w-[350px]"
+                className="flex w-[350px] flex-col justify-center gap-3 text-center"
               >
                 <AccordionItem
                   value="item-1"
@@ -140,16 +140,16 @@ export function Home() {
                 </AccordionItem>
               </Accordion>
 
-              <div className="relative flex flex-col items-center justify-center text-center py-20">
+              <div className="relative flex flex-col items-center justify-center py-20 text-center">
                 <img
                   src={imgPneu}
                   alt="Image de peças"
                   // className="h-[250px] w-[250px] animate-spin-slow md:h-[350px] md:w-[350px]"
                   className="h-[275px] w-[275px] animate-spin-slow md:h-[330px] md:w-[330px]"
                   style={{
-                    maxHeight: '95%',
-                    maxWidth: '95%',
-                    objectFit: 'contain'
+                    maxHeight: "95%",
+                    maxWidth: "95%",
+                    objectFit: "contain",
                   }}
                 />
                 <img
@@ -160,17 +160,17 @@ export function Home() {
                   // className="absolute h-[200px] w-auto max-w-full -rotate-90 transform md:h-[275px] md:w-auto"
                   className="absolute h-[200px] w-auto max-w-full -rotate-90 transform md:h-[275px] md:w-auto"
                   style={{
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%) rotate(-90deg)',
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%) rotate(-90deg)",
                   }}
                 />
               </div>
-              <div className="flex flex-col justify-center gap-3 text-start items-end">
+              <div className="flex flex-col items-end justify-center gap-3 text-start">
                 <Accordion
                   type="single"
                   collapsible
-                  className="flex flex-col justify-center gap-3 text-center w-[350px]"
+                  className="flex w-[350px] flex-col justify-center gap-3 text-center"
                 >
                   <AccordionItem
                     value="item-1"
@@ -265,14 +265,13 @@ export function Home() {
 
               <div className="flex h-full flex-col items-center justify-center gap-6 p-6 text-center md:p-0">
                 <span className="flex flex-col items-center justify-center gap-2 text-3xl">
-                  <a href="/" className="relative flex h-10 w-10">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                    <img
-                      title="Clique para falar conosco."
-                      src={icoWhatsapp}
-                      className="relative inline-flex h-10 w-10 rounded-full bg-green-500"
-                    />
-                  </a>
+                  
+                  <WhatsAppLink
+                    phone={"5565996643812"}
+                    title="Fale conosco agora!"
+                    height="56px"
+                    width="56px"
+                  />
                   Entre em contato
                   <p>(65) 99664-3812</p>
                 </span>

@@ -8,7 +8,7 @@ import { env } from "./env";
 const app = fastify()
 
 app.register(cors, {
-  origin: ['https://www.toyotan.com.br', "*"],
+  origin: ['https://www.toyotan.com.br'],
 })
 
 app.setValidatorCompiler(validatorCompiler);
