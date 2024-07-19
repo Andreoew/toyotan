@@ -127,7 +127,7 @@ export function ContactForm() {
                   />
                 </FormControl>
                 <FormDescription className="text-[1.2rem]">
-                  Seu nome completo.
+                  Seu número de telefone.
                 </FormDescription>
                 <FormMessage />
               </FormItem>
