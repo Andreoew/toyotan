@@ -70,7 +70,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex w-full grid-cols-2 flex-col justify-between gap-5 space-y-8 px-6 md:grid"
+        className="flex w-full grid-cols-2 flex-col justify-between gap-5 space-y-10 px-6 md:grid"
       >
         <div>
           <FormField
