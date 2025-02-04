@@ -7,7 +7,7 @@ import {
 } from "@vis.gl/react-google-maps";
 import { useState } from "react";
 
-import logo from "@/assets/logo.png";
+import logo from "../../public/logo.png";
 
 export function MyGoogleMap() {
   const position = { lat: -14.629786747257263, lng: -57.50969867055225 };

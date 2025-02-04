@@ -16,7 +16,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import LogoImg from "@/assets/logo.png";
+import LogoImg from "../../public/logo.png";
 import icoWhatsapp from "@/assets/whatsapp.svg";
 
 import { imgToyotan } from "./index-img";
