@@ -4,7 +4,7 @@ import {
   Heading,
   SliderArrowLeft,
   SliderArrowRight,
-  SliderControler,
+  SliderController,
   SwiperContainer,
   SwiperPagination,
   SwiperSlideImg,
@@ -19,13 +19,8 @@ import "swiper/css/navigation";
 import LogoImg from "@/assets/logo.png";
 import icoWhatsapp from "@/assets/whatsapp.svg";
 
-import slide_image_1 from "@/assets/images/img_1.png";
-import slide_image_2 from "@/assets/images/img_2.png";
-import slide_image_3 from "@/assets/images/img_3.png";
-import slide_image_4 from "@/assets/images/img_4.png";
-import slide_image_5 from "@/assets/images/img_5.png";
-import slide_image_6 from "@/assets/images/img_6.png";
-import slide_image_7 from "@/assets/images/img_7.png";
+import { imgToyotan } from "./index-img";
+
 import { useEffect, useState } from "react";
 
 export function Slider() {
@@ -78,7 +73,7 @@ export function Slider() {
           depth: 100,
           modifier: 2.5,
         }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
+        pagination={{ el: ".swiper-pagination", clickable: true, dynamicBullets: true,  }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -87,34 +82,19 @@ export function Slider() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-        <SwiperSlideStyled>
-          <SwiperSlideImg src={slide_image_1} alt="slide_image" />
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <SwiperSlideImg src={slide_image_2} alt="slide_image" />
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <SwiperSlideImg src={slide_image_3} alt="slide_image" />
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <SwiperSlideImg src={slide_image_4} alt="slide_image" />
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <SwiperSlideImg src={slide_image_5} alt="slide_image" />
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <SwiperSlideImg src={slide_image_6} alt="slide_image" />
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <SwiperSlideImg src={slide_image_7} alt="slide_image" />
-        </SwiperSlideStyled>
-
-        <SliderControler>
+        {imgToyotan.map((img, index) => (
+          <SwiperSlideStyled key={index}>
+            <SwiperSlideImg src={img} alt={`slide_image_${index + 1}`} />
+          </SwiperSlideStyled>
+        ))}
+        
+        <SliderController>
           <SliderArrowLeft className="swiper-button-prev slider-arrow bg-secondary-foreground" />
           <SliderArrowRight className="swiper-button-next slider-arrow bg-secondary-foreground" />
 
-          <SwiperPagination className="swiper-pagination"></SwiperPagination>
-        </SliderControler>
+          <SwiperPagination className="swiper-pagination" style={{ bottom: "0rem"}}/>
+
+        </SliderController>
       </SwiperContainer>
     </Container>
   );
