@@ -20,7 +20,7 @@ export function Home() {
           <div className="grid h-full w-full max-w-[124rem] grid-cols-1 gap-4 shadow  shadow-secondary-foreground/30 md:grid-cols-3 md:bg-secondary">
             <div className="flex min-h-[200px] flex-col items-center justify-center bg-muted px-4 py-3 font-bold md:bg-muted">
               <CreditCard />
-              <span className="mt-2 text-center">Parcele em até 3X</span>
+              <span className="mt-2 text-center">Parcele em até 6X</span>
             </div>
             <div className="flex min-h-[200px] flex-col items-center justify-center bg-muted px-4 py-3 font-bold md:bg-muted">
               <CarFront />
