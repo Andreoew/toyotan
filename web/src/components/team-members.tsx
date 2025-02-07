@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-// import imgElismar from "@/assets/elismar.png";
-// import imgMarcel from "@/assets/marcel.png";
+import imgElismar from "@/assets/elismar.png";
+import imgJessica from "@/assets/jessica.png";
+import imgMarcel from "@/assets/marcel.png";
 
 type TeamMember = {
   name: string;
@@ -12,17 +13,17 @@ const teamMembers: TeamMember[] = [
   {
     name: "Elismar Moura Gonçalves",
     role: "CEO & Fundador & Técnico",
-    // image: new URL(imgElismar, import.meta.url).href,
+    image: new URL(imgElismar, import.meta.url).href,
   },
   {
     name: "Marcel Renato Sato",
     role: "CEO & Fundador & Técnico",
-    // image: new URL(imgMarcel, import.meta.url).href,
+    image: new URL(imgMarcel, import.meta.url).href,
   },
   {
     name: "Jéssica Sato",
     role: "Administração e Atendimento",
-    // image: new URL(imgMarcel, import.meta.url).href,
+    image: new URL(imgJessica, import.meta.url).href,
   },
 ];
 
