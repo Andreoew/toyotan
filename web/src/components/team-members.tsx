@@ -49,30 +49,34 @@ export function TeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid gap-32 text-center md:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-16 text-center md:grid-cols-2 lg:grid-cols-3"
         >
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="mx-auto flex w-full max-w-xs flex-col items-center gap-4 rounded-lg border p-6 shadow-lg"
+              className="mx-auto flex w-full max-w-md flex-col items-center 
+              gap-6 rounded-xl border p-8 shadow-xl transition-all 
+              duration-300 hover:scale-105 hover:border-red-500 hover:shadow-red-500/30"
             >
-              <div className="relative flex h-96 w-64 items-center justify-center overflow-hidden rounded-md bg-zinc-300">
+              <div className="relative flex h-[28rem] w-80 items-center justify-center overflow-hidden rounded-lg bg-zinc-300">
                 {member.image ? (
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="h-full w-full object-cover object-center opacity-0 transition-opacity duration-500 blur-md"
-                    onLoad={(e) => e.currentTarget.classList.remove("blur-md", "opacity-0")}
+                    className="h-full w-full opacity-0 blur-md transition-opacity duration-500"
+                    onLoad={(e) =>
+                      e.currentTarget.classList.remove("blur-md", "opacity-0")
+                    }
                   />
                 ) : (
                   <span className="text-gray-900">Imagem não disponível</span>
                 )}
               </div>
 
-              <h3 className="whitespace-normal break-words text-xl font-semibold ">
+              <h3 className="whitespace-normal break-words text-2xl font-bold">
                 {member.name}
               </h3>
-              <p className="text-lg">{member.role}</p>
+              <p className="text-lg text-gray-700">{member.role}</p>
             </div>
           ))}
         </motion.div>
