@@ -76,7 +76,7 @@ export function TeamSection() {
               <h3 className="whitespace-normal break-words text-2xl font-bold">
                 {member.name}
               </h3>
-              <p className="text-lg text-gray-700">{member.role}</p>
+              <p className="text-xl text-gray-500 leading-relaxed">{member.role}</p>
             </div>
           ))}
         </motion.div>
