@@ -1,5 +1,8 @@
 import axios from "axios";
 
-export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_EMAIL
-})
+const baseURL =
+  import.meta.env.MODE === "development"
+    ? import.meta.env.VITE_API_DEV
+    : import.meta.env.VITE_API_EMAIL;
+
+export const api = axios.create({ baseURL });

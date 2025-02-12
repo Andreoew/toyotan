@@ -10,10 +10,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsAppLink } from "@/components/whatsapp-link";
+import { Helmet } from "react-helmet-async";
 
 export function Home() {
   return (
     <>
+      <Helmet title="Início" />
       <div className="md:flex md:flex-col">
         <Slider />
         <div className="flex justify-center">

@@ -9,7 +9,12 @@ const envSchema = z.object({
   SMTP_SECURE: z.coerce.boolean().default(false),
   PORT: z.coerce.number().default(3333),
   SMTP_PORT: z.coerce.number().default(465),
-  SEND_EMAIL: z.string()
+  SEND_EMAIL: z.string(),
+  //GOOGLE
+  GOOGLE_SCOPES: z.string(),
+  SPREADSHEET_ID: z.string(),
+  CLIENT_EMAIL: z.string(),
+  PRIVATE_KEY: z.string()
 })
 
 export const env = envSchema.parse(process.env)
