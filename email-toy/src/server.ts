@@ -15,6 +15,7 @@ const app = fastify()
 app.register(cors, {
   origin: ['https://www.toyotan.com.br'],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],  
 })
 
 app.setValidatorCompiler(validatorCompiler);
