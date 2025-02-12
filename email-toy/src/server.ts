@@ -13,7 +13,7 @@ import { createPromoValidity } from "./routes/promo/create-validity-promo";
 const app = fastify()
 
 app.register(cors, {
-  origin: ['https://www.toyotan.com.br', 'http://localhost:5173'],
+  origin: ['https://www.toyotan.com.br'],
 })
 
 app.setValidatorCompiler(validatorCompiler);
