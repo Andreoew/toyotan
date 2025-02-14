@@ -2,6 +2,35 @@ import { TeamSection } from "@/components/team-members";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
+const mission =
+  "Oferecer um serviço de excelência em reparos e manutenção de veículos, combinando conhecimento técnico e experiência prática com o objetivo de superar as expectativas dos nossos clientes, com soluções confiáveis e personalizadas.";
+const vision =
+  "Ser referência em serviços automotivos de excelência e confiabilidade, destacando-se pela dedicação ao cuidado com cada veículo e pela constante inovação em técnicas e ferramentas.";
+const value = [
+  <ul className="mx-auto max-w-[900px] list-none space-y-3 text-left">
+    <li>
+      <strong>Compromisso com a Qualidade:</strong> Priorizar o uso dos melhores
+      equipamentos e práticas, garantindo serviços que façam a diferença na vida
+      útil e desempenho dos veículos.
+    </li>
+    <li>
+      <strong>Transparência e Confiança:</strong> Valorizar uma comunicação
+      honesta com os clientes, construindo relações baseadas na confiança e na
+      credibilidade.
+    </li>
+    <li>
+      <strong>Trabalho em Equipe:</strong> Unir esforços e conhecimentos para
+      alcançar um propósito comum, mantendo a excelência e o respeito em cada
+      etapa do serviço.
+    </li>
+    <li>
+      <strong>Inovação e Dedicação:</strong> Investir continuamente em melhorias
+      e aperfeiçoamento para oferecer sempre o melhor aos nossos clientes e
+      parceiros.
+    </li>
+  </ul>,
+];
+
 export function About() {
   return (
     <>
@@ -26,19 +55,26 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-2"
           >
             {[
-              { title: "Missão", text: "Nossa missão é..." },
-              { title: "Visão", text: "Nossa visão é..." },
-              { title: "Valores", text: "Nossos valores são..." },
-            ].map((item, index) => (
+              { title: "Missão", text: mission },
+              { title: "Visão", text: vision },
+              { title: "Valores", text: value },
+            ].map((item, index, array) => (
+              // className="mx-auto flex w-full max-w-md flex-col items-center 
+              // gap-6 rounded-xl border p-8 shadow-xl transition-all 
+              // duration-300 hover:scale-105 hover:border-red-500 hover:shadow-red-500/30"
               <div
                 key={index}
-                className="flex flex-col items-center gap-4 rounded-lg border p-6 text-center shadow-lg"
+                className={`flex flex-col items-center gap-4 rounded-lg border p-6 text-center shadow-lg transition-all duration-300 hover:scale-105 hover:border-red-500 hover:shadow-red-500/30 ${
+                  index === array.length - 1 ? "lg:col-span-2" : ""
+                }`}
               >
                 <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="">{item.text} (...em construção...)</p>
+                <p className="text-justify dark:text-muted-foreground">
+                  {item.text}
+                </p>
               </div>
             ))}
           </motion.div>
