@@ -62,9 +62,7 @@ export function About() {
               { title: "Visão", text: vision },
               { title: "Valores", text: value },
             ].map((item, index, array) => (
-              // className="mx-auto flex w-full max-w-md flex-col items-center 
-              // gap-6 rounded-xl border p-8 shadow-xl transition-all 
-              // duration-300 hover:scale-105 hover:border-red-500 hover:shadow-red-500/30"
+            
               <div
                 key={index}
                 className={`flex flex-col items-center gap-4 rounded-lg border p-6 text-center shadow-lg transition-all duration-300 hover:scale-105 hover:border-red-500 hover:shadow-red-500/30 ${
